@@ -10,15 +10,15 @@ import { colors } from '../colors';
       <View style={styles.container}>
         <TextInput
           value={value}
-          style={styles.input}
-          inputStyle={styles.inputStyle}
-          labelStyle={styles.labelStyle}
+          style={props.isFilled ? [styles.input, {backgroundColor: colors.blue, borderColor: colors.blueShade}] : styles.input}
+          inputStyle={props.isFilled ? [styles.inputStyle, {color: colors.white, fontWeight: '600'}] : styles.inputStyle}
+          labelStyle={props.isFilled ? styles.labelStyleFilled : styles.labelStyle}
           placeholderStyle={styles.placeholderStyle}
           textErrorStyle={styles.textErrorStyle}
           label= {props.label}
           placeholder= {props.placeholder}
-          placeholderTextColor={colors.gray}
-          focusColor= {colors.blue}
+          placeholderTextColor={ props.isFilled ? colors.white : colors.gray}
+          focusColor= {props.isFilled ? colors.white : colors.blue}
           onChangeText={text => {
             setValue(text);
           }}
@@ -37,19 +37,37 @@ import { colors } from '../colors';
     input: {
       height: 55,
       paddingHorizontal: 12,
-      borderRadius: 8,
-      borderWidth: 0.5,
-      borderColor: colors.blueShade,
+      borderRadius: 30,
+      borderWidth: 1.5,
+      borderColor: colors.blueShade
     },
-    inputStyle: { fontSize: 16 },
+    inputStyle: { 
+        fontSize: 16,
+        paddingLeft: 15,
+        color: colors.blueShade
+     },
     labelStyle: {
       fontSize: 14,
       position: 'absolute',
       top: -10,
-      backgroundColor: colors.white,
       paddingHorizontal: 4,
+      marginStart: 15,
       marginLeft: -4,
+      backgroundColor: colors.white
     },
-    placeholderStyle: { fontSize: 16 },
+    labelStyleFilled:{
+        fontSize: 14,
+        position: 'absolute',
+        top: -10,
+        paddingHorizontal: 4,
+        marginStart: 15,
+        marginLeft: -4,
+        backgroundColor: colors.blue,
+        color: colors.blue
+    },
+    placeholderStyle: { 
+        fontSize: 16,
+        paddingLeft: 15
+    },
     textErrorStyle: { fontSize: 16 },
   });

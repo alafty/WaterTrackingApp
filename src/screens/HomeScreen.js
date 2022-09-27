@@ -7,7 +7,7 @@ const LoginScreen = ({navigation}) => {
             <Text>Login</Text>
             <TouchableOpacity
             onPress={() => {
-                navigation.navigate('landing')
+                navigation.navigate('login')
                 }
             }>
                 <Text> back </Text>

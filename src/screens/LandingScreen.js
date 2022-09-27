@@ -1,6 +1,7 @@
 import React from "react";
 import {SafeAreaView, Text, View, TouchableOpacity, Image, StyleSheet, Button } from "react-native";
 import {colors} from '../colors'
+import { FilledButton } from "../components/FilledButton";
 import TextInputComponent from "../components/TextInput";
 
 const LandingScreen = ({navigation}) => {
@@ -27,18 +28,17 @@ const LandingScreen = ({navigation}) => {
                 <Text style={styles.footnote}>Forgot password?</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity 
-            style= {styles.filledButton}
-            onPress={() => {
-                navigation.navigate('login')
-                }
-            }>
-                <Text style= {styles.filledButtonText}>Login</Text>
-            </TouchableOpacity> 
-
-            <TouchableOpacity style={styles.borderedButton}>
-                <Text style={styles.borderedButtonText}>Sign Up</Text>
-            </TouchableOpacity>
+            <FilledButton 
+            label= 'Login'
+            destination= 'home'
+            navigation= {navigation}
+            />
+            <FilledButton 
+            label= 'Sign Up'
+            destination= 'signup'
+            isBordered= 'true'
+            navigation= {navigation}
+            />
 
             </View>
         </View>
@@ -64,39 +64,10 @@ const styles = StyleSheet.create({
         fontStyle: 'italic',
         letterSpacing: 5
     },
-    filledButton:{
-        width: '90%',
-        backgroundColor: colors.blue,
-        alignItems: 'center',
-        padding: 15,
-        marginTop: 10,
-        borderRadius: 30,
-        alignSelf: 'center',
-        marginTop: 20
-    },
-    filledButtonText:{
-        fontSize: 18, 
-        color: colors.white
-    },
-    borderedButton:{
-        width: '90%',
-        borderColor: colors.blue,
-        borderWidth: 1,
-        alignItems: 'center',
-        padding: 15,
-        marginTop: 10,
-        borderRadius: 30,
-        alignSelf: 'center',
-        marginTop: 20
-    },
-    borderedButtonText:{
-        fontSize: 18, 
-        color: colors.blue,
-    },
     footnote:{
         fontSize: 12,
         fontWeight: '300',
-        paddingHorizontal: 18,
+        paddingHorizontal: 30,
         paddingTop: 5,
         opacity: 0.7,
     }
