@@ -4,33 +4,33 @@ import { colors } from "../colors";
 import { FilledButton } from "../components/FilledButton";
 import { FormItem } from "../components/FormItem";
 
-const SignUpScreen = ({navigation}) => {
+const PersonalInfoScreen = ({navigation}) => {
     return(
         <View style={styles.container}>
             
             <FormItem
-            heading= 'How tall are you?'
-            label= 'Height'
-            placeholder= 'e.g. 90 (kg)' />
+            heading= 'What is your name?'
+            label= 'Name'
+            placeholder= 'John Doe' />
 
             <FormItem
-            heading= 'How much do you weigh?'
-            label= 'Weight'
-            placeholder= 'e.g. 170 (cm)' />
+            heading= 'What is your E-Mail?'
+            label= 'E-Mail'
+            placeholder= 'johndoe@domain.com' />
             
             <FormItem
-            heading= 'How many days do you exercise per week?'
-            label= 'Days'
-            placeholder= 'e.g. 3 (per week)' />
+            heading= 'Please create a password'
+            label= 'Password'
+            placeholder= '*********' />
 
             <FormItem
-            heading= 'How many hours do you exercise per day?'
-            label= 'Hours'
-            placeholder= 'e.g. 1.5 (per exercising day)' />
+            heading= 'Please confirm password'
+            label= 'Confirm Password'
+            placeholder= '*********' />
 
             <FilledButton 
-            label= 'Continue' 
-            destination= "tab"
+            label= 'Next' 
+            destination= 'signup'
             navigation= {navigation}
             />
         </View>
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default SignUpScreen;
+export default PersonalInfoScreen;

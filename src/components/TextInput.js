@@ -44,7 +44,7 @@ import { colors } from '../colors';
     inputStyle: { 
         fontSize: 16,
         paddingLeft: 15,
-        color: colors.blueShade
+        color: 'black'
      },
     labelStyle: {
       fontSize: 14,
