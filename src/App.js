@@ -13,7 +13,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen 
-        name= "login"
+        name= "landing"
         component= {LandingScreen}
         options= {{ headerShown: false}}
         />
