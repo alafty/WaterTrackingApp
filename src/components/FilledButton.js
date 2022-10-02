@@ -27,10 +27,9 @@ const styles = StyleSheet.create({
         backgroundColor: colors.blue,
         alignItems: 'center',
         padding: 15,
-        marginTop: 10,
+        marginTop: 30,
         borderRadius: 30,
         alignSelf: 'center',
-        marginTop: 30
     },
     filledButtonText:{
         fontSize: 18, 
@@ -43,10 +42,9 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         alignItems: 'center',
         padding: 15,
-        marginTop: 10,
+        marginTop: 20,
         borderRadius: 30,
         alignSelf: 'center',
-        marginTop: 20
     },
     borderedButtonText:{
         fontSize: 18, 

@@ -1,19 +1,19 @@
 import React from "react";
-import { SafeAreaView , Text, TouchableOpacity} from "react-native";
+import { View, Text} from "react-native"
+import { FilledButton } from "../components/FilledButton";
 
-const LoginScreen = ({navigation}) => {
+
+const HomeScreen = ({navigation}) => {
     return(
-        <SafeAreaView>
-            <Text>Login</Text>
-            <TouchableOpacity
-            onPress={() => {
-                navigation.navigate('login')
-                }
-            }>
-                <Text> back </Text>
-            </TouchableOpacity>
-        </SafeAreaView>
-    );
+        <View>
+            <Text> Home </Text>
+            <FilledButton 
+            label= "Back"
+            destination= "signup"
+            navigation= {navigation}
+            />
+        </View>
+    )
 }
 
-export default LoginScreen;
+export default HomeScreen;

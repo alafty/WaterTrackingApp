@@ -35,7 +35,7 @@ const LandingScreen = ({navigation}) => {
             />
             <FilledButton 
             label= 'Sign Up'
-            destination= 'signup'
+            destination= 'personal'
             isBordered= 'true'
             navigation= {navigation}
             />
