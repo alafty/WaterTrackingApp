@@ -1,12 +1,16 @@
 import React from "react";
 import { View, Text, Settings} from "react-native"
 import { FilledButton } from "../components/FilledButton";
-
+import Profile from "../components/Profile";
 
 const SettingsScreen = ({navigation}) => {
     return(
         <View>
-            <Text> Settings </Text>
+            <Profile
+            name= "Demo"
+            email= "Demo@demo.com"
+            />
+            
         </View>
     );
 }

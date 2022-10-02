@@ -30,7 +30,7 @@ const LandingScreen = ({navigation}) => {
 
             <FilledButton 
             label= 'Login'
-            destination= 'home'
+            destination= 'tab'
             navigation= {navigation}
             />
             <FilledButton 
