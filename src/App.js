@@ -5,11 +5,14 @@ import LandingScreen from './screens/LandingScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import PersonalInfoScreen from './screens/PersonalInfoScreen'
 import TabScreen from './screens/TabScreen';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
+    <Provider store={store}>
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen 
@@ -35,6 +38,7 @@ const App = () => {
       </Stack.Navigator>
 
     </NavigationContainer>
+    </Provider>
   );
 };
 

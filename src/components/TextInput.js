@@ -22,6 +22,7 @@ import { colors } from '../colors';
           onChangeText={text => {
             setValue(text);
           }}
+          secureTextEntry={props.isSecure}
         />
       </View>
     );
@@ -39,7 +40,10 @@ import { colors } from '../colors';
       paddingHorizontal: 12,
       borderRadius: 30,
       borderWidth: 1.5,
-      borderColor: colors.blueShade
+      borderColor: colors.blueShade,
+      width: '90%',
+      alignSelf: 'center',
+      marginTop: 10
     },
     inputStyle: { 
         fontSize: 16,
@@ -70,4 +74,5 @@ import { colors } from '../colors';
         paddingLeft: 15
     },
     textErrorStyle: { fontSize: 16 },
+    
   });

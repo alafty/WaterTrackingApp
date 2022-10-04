@@ -1,16 +1,18 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View} from 'react-native'
+import { useDispatch, useSelector } from "react-redux";
 import { colors } from "../colors";
 
+
 export const FilledButton = (props) => {
+    const states = useSelector(state => state.reducer);
+    const dispatch = useDispatch();
+
     return(
         <View>
             <TouchableOpacity 
             style={props.isBordered ? styles.borderedButton : styles.filledButton}
-            onPress={() => {
-                props.navigation.navigate(props.destination)
-                }
-            }>
+            onPress={props.onPress}>
                 <Text 
                 style={props.isBordered ? styles.borderedButtonText : styles.filledButtonText}>
                     {props.label}
