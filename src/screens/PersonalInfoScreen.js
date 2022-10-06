@@ -66,7 +66,7 @@ const PersonalInfoScreen = ({navigation}) => {
                             "password": password
                         }
                     })
-                    navigation.navigate('signup');
+                    navigation.navigate('health');
                 }
             }}
             />

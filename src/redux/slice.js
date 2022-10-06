@@ -13,7 +13,7 @@ export const Slice = createSlice({
         exerciseHours: 0,
         BMI: null,
         idealIntake: 0,
-        dailyGoal: 5000,
+        dailyGoal: 100,
         dayConsumption: 0,
         cupAmount: 100
     },
@@ -40,11 +40,14 @@ export const Slice = createSlice({
             state.email = action.payload.email;
             state.password = action.payload.password;
         },
-        signup: (state, action) => {
+        setHealthData: (state, action) => {
             state.height = action.payload.height;
             state.weight = action.payload.weight;
             state.BMI = state.weight / (state.height * state.height);
             state.idealIntake = calculateIntake(state.weight, action.payload.exerciseDays, action.payload.exerciseHours);
+        },
+        editGoal: (state, action) => {
+            state.dailyGoal = action.payload;
             state.loggedIn = true;
         },
         addCup: (state) => {
@@ -60,7 +63,7 @@ export const Slice = createSlice({
     }   
 })
 
-export const {signup, login,setPersonalData, editAmount, setGoal, addCup} = Slice.actions;
+export const {login, logout, setPersonalData, setHealthData, editAmount, editGoal, addCup} = Slice.actions;
 export default Slice.reducer;
 
 const calculateIntake = (weight, exerciseDays, exerciseHours) =>{

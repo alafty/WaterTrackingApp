@@ -5,9 +5,9 @@ import { FilledButton } from "../components/FilledButton";
 import { FormItem } from "../components/FormItem";
 import { useReducer, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { signup } from "../redux/slice";
+import { setHealthData } from "../redux/slice";
 
-const SignUpScreen = ({navigation}) => {
+const HealthInfoScreen = ({navigation}) => {
     const states = useSelector(state => state.reducer);
     const dispatch = useDispatch();
     const [height, setHeight] = useState('');
@@ -55,10 +55,10 @@ const SignUpScreen = ({navigation}) => {
             />
 
             <FilledButton 
-            label= 'Continue' 
+            label= 'Next' 
             onPress= {() => {
                 dispatch({
-                    type: signup,
+                    type: setHealthData,
                     payload: {
                         "height": height, 
                         "weight": weight,
@@ -67,8 +67,7 @@ const SignUpScreen = ({navigation}) => {
                     }
                 }
                 )
-                navigation.navigate('tab')
-                console.warn(states);
+                navigation.navigate('goal')
             }}
             />
         </View>
@@ -84,4 +83,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default SignUpScreen;
+export default HealthInfoScreen;

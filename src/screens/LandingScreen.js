@@ -68,6 +68,7 @@ const LandingScreen = ({navigation}) => {
                         password: password
                     }
                 })
+                console.warn(email);
                 if(states.loggedIn){
                     console.warn(states)
                     navigation.navigate('tab')

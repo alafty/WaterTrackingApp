@@ -2,11 +2,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import LandingScreen from './screens/LandingScreen';
-import SignUpScreen from './screens/SignUpScreen';
+import HealthInfoScreen from './screens/HealthInfoScreen';
 import PersonalInfoScreen from './screens/PersonalInfoScreen'
 import TabScreen from './screens/TabScreen';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import DailyGoalScreen from './screens/DailyGoalScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,13 +22,18 @@ const App = () => {
         options= {{ headerShown: false}}
         />
         <Stack.Screen
-        name= "signup"
-        component={SignUpScreen}
+        name= "personal"
+        component={PersonalInfoScreen}
         options= {{headerShown: false}}
         />
         <Stack.Screen
-        name= "personal"
-        component={PersonalInfoScreen}
+        name= "health"
+        component={HealthInfoScreen}
+        options= {{headerShown: false}}
+        />
+        <Stack.Screen
+        name= "goal"
+        component={DailyGoalScreen}
         options= {{headerShown: false}}
         />
         <Stack.Screen
