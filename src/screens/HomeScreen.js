@@ -13,8 +13,11 @@ import { add } from "react-native-reanimated";
 const HomeScreen = ({navigation}) => {
     const states = useSelector(state => state.reducer);
     const dispatch = useDispatch();
-    const [isModalVisible, setModalVisibility] = useState(true);
+    const [isModalVisible, setModalVisibility] = useState(false);
 
+    useState(() => {
+
+    }, [states.dayConsumption])
     return(
         <ScrollView>
             <UpperNotch/>
@@ -31,7 +34,8 @@ const HomeScreen = ({navigation}) => {
                     <Image source={require('../../assets/trophy.png')} style= {{width: 50, height: 50}}/>
                 </DataCircle> 
             </View>
-
+            {console.warn(states.dayConsumption)}
+            {console.warn(states.dailyGoal)}
             <Progress.Circle 
             color={colors.blue}
             progress= {states.dayConsumption/states.dailyGoal}

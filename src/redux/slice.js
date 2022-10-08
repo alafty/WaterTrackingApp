@@ -1,8 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
+import {writeJsonFile} from 'write-json-file';
+
 
 export const Slice = createSlice({
     name: 'mainSlice',
     initialState:{
+        loggedInUserID: "",
         email: null,
         name: null,
         password: null,
@@ -13,24 +16,63 @@ export const Slice = createSlice({
         exerciseHours: 0,
         BMI: null,
         idealIntake: 0,
-        dailyGoal: 100,
+        dailyGoal: null,
         dayConsumption: 0,
-        cupAmount: 100
+        cupAmount: 100,
+        usersCount: 2,
+        registeredUsers:[
+        {
+            "id" : 1,
+            "email": "L",
+            "name": "Mido",
+            "password": ";",
+            "height": "187",
+            "weight": "90",
+            "exerciseDays": "3",
+            "exerciseHours": "2",
+            "BMI": "35",
+            "idealIntake": "2300",
+            "dailyGoal": "2500",
+            "dayConsumption": 0,
+            "cupAmount": 100
+        },
+        {
+            "id": 2,
+            "email": "fido@mido",
+            "name": "fido",
+            "password": "12",
+            "height": "190",
+            "weight": "80",
+            "exerciseDays": "4",
+            "exerciseHours": "3",
+            "BMI": "20",
+            "idealIntake": "2800",
+            "dailyGoal": "2900",
+            "dayConsumption": 0,
+            "cupAmount": 100
+        }]
     },
     reducers:{
         login: (state, action) => {
-            if (state.email == action.payload.email
-                && state.password == action.payload.password) {
+            state.registeredUsers.forEach((user) => {
+                if(user.email == action.payload.email && 
+                user.password == action.payload.password) {
                     state.email = action.payload.email;
-                    state.email = action.payload.password;
+                    state.password = action.payload.password;
+                    state.name = user.name;
+                    state.height = user.height;
+                    state.weight = user.weight;
+                    state.exerciseDays = user.exerciseDays;
+                    state.exerciseHours = user.exerciseHours;
+                    state.BMI = user.BMI;
+                    state.idealIntake = user.idealIntake;
+                    state.dailyGoal = user.dailyGoal;
+                    state.dayConsumption = user.dayConsumption;
+                    state.cupAmount = user.cupAmount;
                     state.loggedIn = true;
-                    console.warn('yy')
-                } else if (state.email == null && state.password == null){
-                    state.email = action.payload.email;
-                    state.password = action.payload.password; 
-                    state.loggedIn = true;
-                    console.warn('ff')
-                }
+                    return true;
+                  }
+                 })
         },
         logout: (state) => {
             state.loggedIn = false;
@@ -48,22 +90,39 @@ export const Slice = createSlice({
         },
         editGoal: (state, action) => {
             state.dailyGoal = action.payload;
-            state.loggedIn = true;
         },
         addCup: (state) => {
-            state.dayConsumption += state.cupAmount;
+            state.dayConsumption = parseInt(state.dayConsumption + state.cupAmount);
         },
         editAmount: (state, action) => {
             state.cupAmount = action.payload;
         },
-        setGoal: (state, action) => {
-            state.dailyGoal = action.payload;
+        setDailyGoal: (state, action) => {
+            console.warn(action.payload);
+            state.dailyGoal= action.payload
+            state.usersCount++;
+            state.registeredUsers.push({
+            "id": state.usersCount,
+            "email": state.email,
+            "name": state.name,
+            "password": state.password,
+            "height": state.height,
+            "weight": state.weight,
+            "exerciseDays": state.exerciseDays,
+            "exerciseHours": state.exerciseHours,
+            "BMI": state.BMI,
+            "idealIntake": state.idealIntake,
+            "dailyGoal": state.dailyGoal,
+            "dayConsumption": 0,
+            "cupAmount": 230
+            })
+            state.loggedIn = true; 
+            
         }
-
     }   
 })
 
-export const {login, logout, setPersonalData, setHealthData, editAmount, editGoal, addCup} = Slice.actions;
+export const {login, logout, setPersonalData, setHealthData, editAmount, editGoal, setDailyGoal, addCup} = Slice.actions;
 export default Slice.reducer;
 
 const calculateIntake = (weight, exerciseDays, exerciseHours) =>{

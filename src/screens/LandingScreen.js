@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import { Text, View, TouchableOpacity, Image, StyleSheet, Button } from "react-native";
 import { TextInput } from "react-native-element-textinput";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,6 +11,9 @@ const LandingScreen = ({navigation}) => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    useEffect(() => {
+        
+    }, [states.loggedIn]);
 
     return(
         <View>
@@ -61,16 +64,13 @@ const LandingScreen = ({navigation}) => {
             <FilledButton 
             label= 'Login'
             onPress= {() => {
-                dispatch({
+                if(dispatch({
                     type: login,
                     payload:{
                         email: email, 
                         password: password
                     }
-                })
-                console.warn(email);
-                if(states.loggedIn){
-                    console.warn(states)
+                })){
                     navigation.navigate('tab')
                 }else {
                     

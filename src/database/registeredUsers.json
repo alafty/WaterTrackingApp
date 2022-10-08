@@ -1,33 +1,6 @@
-{ 
-   "1": { 
-        "email": "mido@mido",
-        "name": "mido",
-        "password": "12",
-        "loggedIn": false,
-        "height": "187",
-        "weight": "90",
-        "exerciseDays": "3",
-        "exerciseHours": "2",
-        "BMI": "35",
-        "idealIntake": "2300",
-        "dailyGoal": "2500",
-        "dayConsumption": "100",
-        "cupAmount": "100"
-    },
-    "2":{
-        "email": "fido@mido",
-        "name": "fido",
-        "password": "12",
-        "loggedIn": false,
-        "height": "190",
-        "weight": "80",
-        "exerciseDays": "4",
-        "exerciseHours": "3",
-        "BMI": "20",
-        "idealIntake": "2800",
-        "dailyGoal": "2900",
-        "dayConsumption": "200",
-        "cupAmount": "100"
-    }
+{   "usersCount": 2,
+    "users":[
+        
+    ]
 
 }
