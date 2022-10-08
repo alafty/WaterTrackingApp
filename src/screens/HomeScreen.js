@@ -19,7 +19,7 @@ const HomeScreen = ({navigation}) => {
 
     }, [states.dayConsumption])
     return(
-        <ScrollView>
+        <View>
             <UpperNotch/>
             <View style={{flexDirection: 'row'}}>
                 <DataCircle
@@ -34,8 +34,11 @@ const HomeScreen = ({navigation}) => {
                     <Image source={require('../../assets/trophy.png')} style= {{width: 50, height: 50}}/>
                 </DataCircle> 
             </View>
-            {console.warn(states.dayConsumption)}
-            {console.warn(states.dailyGoal)}
+            {(states.dayConsumption/states.dailyGoal == 1) ? 
+            <Text 
+            style={styles.heading}
+            > Congratulations, you've completed your daily goal !</Text> 
+            :
             <Progress.Circle 
             color={colors.blue}
             progress= {states.dayConsumption/states.dailyGoal}
@@ -46,6 +49,7 @@ const HomeScreen = ({navigation}) => {
             size= {300}
             showsText= {true}
             style= {{alignSelf: 'center'}}/>
+            }
 
             <View style={{flexDirection: 'row' , justifyContent: 'center'}}>
                 <TouchableOpacity
@@ -120,10 +124,7 @@ const HomeScreen = ({navigation}) => {
                 </Modal>
 
             </View>
-            <FilledButton 
-            label= "Back"
-            />
-        </ScrollView>
+        </View>
     )
 }
 
@@ -141,6 +142,13 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.4,
         borderRadius: 15
 
+    },
+    heading:{
+        fontSize: 32,
+        fontWeight: '600',
+        color: colors.blue,
+        padding: 20,
+        textAlign: 'center'
     },
     cuptext:{
         fontSize: 22,
