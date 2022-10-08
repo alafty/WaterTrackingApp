@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Image, Text, TouchableOpacity, StyleSheet} from "react-native"
 import { DataCircle } from "../components/DataCircle";
 import * as Progress from 'react-native-progress'
@@ -14,6 +14,11 @@ const HomeScreen = ({navigation}) => {
     const states = useSelector(state => state.reducer);
     const dispatch = useDispatch();
     const [isModalVisible, setModalVisibility] = useState(false);
+    var progress = states.dayConsumption/states.dailyGoal;
+    useEffect(() => {
+      progress = states.dayConsumption/states.dailyGoal
+    }, [states.email, states.loggedIn])
+    
 
     return(
         <View>
@@ -35,10 +40,10 @@ const HomeScreen = ({navigation}) => {
                 </DataCircle> 
             </View>
             
-             {/*main progress bar*/}
+            {/*main progress bar*/}
             <Progress.Circle 
             color={colors.blue}
-            progress= {states.dayConsumption/states.dailyGoal}
+            progress= {progress}
             borderColor={colors.blueShade}
             borderWidth= {5}
             thickness= {10}

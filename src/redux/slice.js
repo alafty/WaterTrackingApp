@@ -23,7 +23,7 @@ export const Slice = createSlice({
         registeredUsers:[
         {
             "id" : 1,
-            "email": "admin",
+            "email": "Admin",
             "name": "admin",
             "password": "admin",
             "height": "187",
@@ -84,7 +84,7 @@ export const Slice = createSlice({
         setHealthData: (state, action) => {
             state.height = action.payload.height;
             state.weight = action.payload.weight;
-            state.BMI = state.weight / (state.height * state.height);
+            state.BMI = state.weight / Math.pow(state.height, 2);
             state.idealIntake = calculateIntake(state.weight, action.payload.exerciseDays, action.payload.exerciseHours);
         },
         editGoal: (state, action) => {
@@ -140,5 +140,5 @@ export const {login, resetPassword, logout, setPersonalData, setHealthData, edit
 export default Slice.reducer;
 
 const calculateIntake = (weight, exerciseDays, exerciseHours) =>{
-    return Math.floor(0.5 * weight * (((exerciseHours/0.5) * (exerciseDays/7)) * 355))
+    return Math.floor(((0.5 * weight)* 30) + (((exerciseHours/0.5) * (exerciseDays/7)) * 355))
 }
