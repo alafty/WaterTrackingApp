@@ -76,5 +76,4 @@ const styles = StyleSheet.create({
           fontSize: 16,
           paddingLeft: 15
       },
-      textErrorStyle: { fontSize: 16 }
 })
