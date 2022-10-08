@@ -21,7 +21,9 @@ export const FormItem = (props) => {
             focusColor= {colors.blue}
             onChangeText={props.onChangeText}
             secureTextEntry= {props.secureTextEntry} 
+            numeric= {props.numeric}
             />
+            
         </View>
     )
 }

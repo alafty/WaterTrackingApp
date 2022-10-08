@@ -30,7 +30,6 @@ const DailyGoalScreen = ({navigation}) => {
                 setGoal(text);
             }}
             />
-            {console.warn(goal)}
             <FilledButton 
             label= 'Next' 
             onPress= {() => {

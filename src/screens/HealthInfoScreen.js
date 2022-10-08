@@ -22,19 +22,21 @@ const HealthInfoScreen = ({navigation}) => {
             <FormItem
             heading= 'How tall are you?'
             label= 'Height'
-            placeholder= 'e.g. 90 (kg)' 
+            placeholder= 'e.g. 170 (cm)' 
             onChangeText={text => {
                 setHeight(text);
             }}
+            numeric= {true}
             />
 
             <FormItem
             heading= 'How much do you weigh?'
             label= 'Weight'
-            placeholder= 'e.g. 170 (cm)'
+            placeholder= 'e.g. 90 (kg)'
             onChangeText={text => {
                 setWeight(text);
             }}
+            numeric= {true}
             />
             
             <FormItem
@@ -44,6 +46,7 @@ const HealthInfoScreen = ({navigation}) => {
             onChangeText={text => {
                 setDays(text);
             }}
+            numeric= {true}
             />
 
             <FormItem
@@ -53,6 +56,7 @@ const HealthInfoScreen = ({navigation}) => {
             onChangeText={text => {
                 setHours(text);
             }}
+            numeric= {true}
             />
 
             <FilledButton 

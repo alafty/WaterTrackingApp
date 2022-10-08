@@ -107,7 +107,6 @@ export const Slice = createSlice({
             state.cupAmount = action.payload;
         },
         setDailyGoal: (state, action) => {
-            console.warn(action.payload);
             state.dailyGoal= action.payload
             state.usersCount++;
             state.registeredUsers.push({

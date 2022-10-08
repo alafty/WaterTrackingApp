@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { View, Image, Text, ScrollView, TouchableOpacity, StyleSheet} from "react-native"
+import { View, Image, Text, TouchableOpacity, StyleSheet} from "react-native"
 import { DataCircle } from "../components/DataCircle";
-import { FilledButton } from "../components/FilledButton";
 import * as Progress from 'react-native-progress'
 import UpperNotch from "../components/UpperNotch";
 import { colors } from "../colors";
 import { useDispatch, useSelector } from "react-redux";
 import { addCup, editAmount } from "../redux/slice";
 import Modal from 'react-native-modal'
-import { add } from "react-native-reanimated";
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+
 
 const HomeScreen = ({navigation}) => {
     const states = useSelector(state => state.reducer);
@@ -22,13 +22,13 @@ const HomeScreen = ({navigation}) => {
                 <DataCircle
                 title= "Ideal Intake"
                 data= {states.idealIntake + ' ml'}> 
-                    <Image source={require('../../assets/waterCup.png')} style= {{width: 40, height: 50}}/>
+                    <FontAwesome5 name="tint" size={45} color={colors.blueShade} />
                 </DataCircle>
 
                 <DataCircle
                 title= "Daily Goal"
                 data= {states.dailyGoal + ' ml'} >
-                    <Image source={require('../../assets/trophy.png')} style= {{width: 50, height: 50}}/>
+                    <FontAwesome5 name="trophy" size={45} color={colors.blueShade} />
                 </DataCircle> 
             </View>
             

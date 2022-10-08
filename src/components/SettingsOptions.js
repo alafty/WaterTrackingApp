@@ -11,7 +11,6 @@ const SettingsOptions = (props) => {
         </View>
     );
 }
-s
 const style = StyleSheet.create({
     container:{
         backgroundColor: '#ffffff',
