@@ -1,9 +1,10 @@
 import React, { useState, useEffect} from "react";
-import { Text, View, TouchableOpacity, Image, StyleSheet, Button } from "react-native";
+import { Text, View, TouchableOpacity, Image, StyleSheet, Button, Modal } from "react-native";
 import { TextInput } from "react-native-element-textinput";
 import { useDispatch, useSelector } from "react-redux";
 import {colors} from '../colors'
 import { FilledButton } from "../components/FilledButton";
+import { FormItem } from "../components/FormItem";
 import { login, signup } from "../redux/slice";
 
 const LandingScreen = ({navigation}) => {
@@ -65,7 +66,11 @@ const LandingScreen = ({navigation}) => {
             secureTextEntry= {true} 
             />
 
-            <TouchableOpacity>
+            <TouchableOpacity
+            onPress={() => {
+                navigation.navigate("resetpassword")
+            }}
+            >
                 <Text style={styles.footnote}>Forgot password?</Text>
             </TouchableOpacity>
 
@@ -110,6 +115,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: 25
+    },
+    popup:{
+        flex: 0,
+        height: 300,
+        width: '70%',
+        backgroundColor: colors.white,
+        alignSelf: 'center',
+        marginTop: 250,
+        shadowColor: 'black',
+        shadowOffset: {x: 5, y: 5},
+        shadowRadius: 10,
+        shadowOpacity: 0.4,
+        borderRadius: 15
+
     },
     heading:{
         fontSize: 42,

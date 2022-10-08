@@ -8,6 +8,7 @@ import TabScreen from './screens/TabScreen';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import DailyGoalScreen from './screens/DailyGoalScreen';
+import ResetPasswordScreen from './screens/ResetPasswordScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +35,11 @@ const App = () => {
         <Stack.Screen
         name= "goal"
         component={DailyGoalScreen}
+        options= {{headerShown: false}}
+        />
+        <Stack.Screen
+        name= "resetpassword"
+        component={ResetPasswordScreen}
         options= {{headerShown: false}}
         />
         <Stack.Screen

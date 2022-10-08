@@ -124,13 +124,19 @@ export const Slice = createSlice({
             "dayConsumption": 0,
             "cupAmount": 230
             })
-            state.loggedIn = true; 
-            
+            state.loggedIn = true;   
+        },
+        resetPassword: (state, action) => {
+            state.registeredUsers.forEach((user) => {
+                if(action.payload.email == user.email){
+                    user.password = action.payload.password;
+                }
+            })
         }
-    }   
+    }
 })
 
-export const {login, logout, setPersonalData, setHealthData, editAmount, editGoal, setDailyGoal, addCup} = Slice.actions;
+export const {login, resetPassword, logout, setPersonalData, setHealthData, editAmount, editGoal, setDailyGoal, addCup} = Slice.actions;
 export default Slice.reducer;
 
 const calculateIntake = (weight, exerciseDays, exerciseHours) =>{
