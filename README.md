@@ -20,6 +20,8 @@ This project was created as a task from Ithmar Solutions. The PDF specifying the
 *Problems Faced*
 
 1- Adding notifications for reminders as iOS needed an Apple Developer Program subscription
+2- BMI is not correctly calculated
+3- dailyConsumption does not get updated on user switch
 
 ----------------------------
 *Project Heirarchy*
