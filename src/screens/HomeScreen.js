@@ -17,7 +17,10 @@ const HomeScreen = ({navigation}) => {
 
     return(
         <View>
+            {/*upper blue notch*/}
             <UpperNotch/>
+
+            {/*showing both ideal intake and daily goal*/}
             <View style={{flexDirection: 'row'}}>
                 <DataCircle
                 title= "Ideal Intake"
@@ -32,6 +35,7 @@ const HomeScreen = ({navigation}) => {
                 </DataCircle> 
             </View>
             
+             {/*main progress bar*/}
             <Progress.Circle 
             color={colors.blue}
             progress= {states.dayConsumption/states.dailyGoal}
@@ -43,6 +47,8 @@ const HomeScreen = ({navigation}) => {
             showsText= {true}
             style= {{alignSelf: 'center'}}/>
 
+
+            {/*buttons for adding and editng cups*/}
             {(states.dayConsumption/states.dailyGoal >= 1) ? 
             <Text 
             style={styles.heading}

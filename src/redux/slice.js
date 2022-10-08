@@ -23,9 +23,9 @@ export const Slice = createSlice({
         registeredUsers:[
         {
             "id" : 1,
-            "email": "L",
-            "name": "Mido",
-            "password": ";",
+            "email": "admin",
+            "name": "admin",
+            "password": "admin",
             "height": "187",
             "weight": "90",
             "exerciseDays": "3",
@@ -38,9 +38,9 @@ export const Slice = createSlice({
         },
         {
             "id": 2,
-            "email": "fido@mido",
-            "name": "fido",
-            "password": "12",
+            "email": "ithmar-solutions@gmail.com",
+            "name": "ithmar-solutions",
+            "password": "test",
             "height": "190",
             "weight": "80",
             "exerciseDays": "4",
