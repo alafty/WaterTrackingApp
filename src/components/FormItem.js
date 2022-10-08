@@ -20,6 +20,7 @@ export const FormItem = (props) => {
             placeholderTextColor={colors.gray}
             focusColor= {colors.blue}
             onChangeText={props.onChangeText}
+            secureTextEntry= {props.secureTextEntry} 
             />
         </View>
     )

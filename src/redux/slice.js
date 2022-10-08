@@ -89,9 +89,19 @@ export const Slice = createSlice({
         },
         editGoal: (state, action) => {
             state.dailyGoal = action.payload;
+            state.registeredUsers.forEach((user) => {
+                if(user.email == state.email){
+                    user.dailyGoal = state.dailyGoal;
+                }
+            })
         },
         addCup: (state) => {
             state.dayConsumption = parseInt(state.dayConsumption + state.cupAmount);
+            state.registeredUsers.forEach((user) => {
+                if(user.email == state.email){
+                    user.dayConsumption = state.dayConsumption;
+                }
+            })
         },
         editAmount: (state, action) => {
             state.cupAmount = action.payload;

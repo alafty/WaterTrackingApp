@@ -15,9 +15,6 @@ const HomeScreen = ({navigation}) => {
     const dispatch = useDispatch();
     const [isModalVisible, setModalVisibility] = useState(false);
 
-    useState(() => {
-
-    }, [states.dayConsumption])
     return(
         <View>
             <UpperNotch/>
@@ -34,11 +31,7 @@ const HomeScreen = ({navigation}) => {
                     <Image source={require('../../assets/trophy.png')} style= {{width: 50, height: 50}}/>
                 </DataCircle> 
             </View>
-            {(states.dayConsumption/states.dailyGoal == 1) ? 
-            <Text 
-            style={styles.heading}
-            > Congratulations, you've completed your daily goal !</Text> 
-            :
+            
             <Progress.Circle 
             color={colors.blue}
             progress= {states.dayConsumption/states.dailyGoal}
@@ -49,8 +42,12 @@ const HomeScreen = ({navigation}) => {
             size= {300}
             showsText= {true}
             style= {{alignSelf: 'center'}}/>
-            }
 
+            {(states.dayConsumption/states.dailyGoal >= 1) ? 
+            <Text 
+            style={styles.heading}
+            > Congratulations, you've completed your daily goal !</Text> 
+            :
             <View style={{flexDirection: 'row' , justifyContent: 'center'}}>
                 <TouchableOpacity
                 onPress={() => {
@@ -78,6 +75,8 @@ const HomeScreen = ({navigation}) => {
                         <Image source={require('../../assets/waterCupEdit.png')} style= {{width: 35, height: 45}}/>
                     </DataCircle>
                 </TouchableOpacity> 
+                </View>
+                }
                 <Modal 
                 style={styles.popup}
                 isVisible= {isModalVisible}
@@ -122,8 +121,6 @@ const HomeScreen = ({navigation}) => {
                         </TouchableOpacity>
                     </View>
                 </Modal>
-
-            </View>
         </View>
     )
 }

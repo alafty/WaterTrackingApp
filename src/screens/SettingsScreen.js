@@ -14,6 +14,7 @@ const SettingsScreen = ({navigation}) => {
     const states = useSelector(state => state.reducer)
     const dispatch = useDispatch();
     const[isModalVisible, setModalVisibility] = useState(false);
+    const[isDataModalVisible, setDataModalVisibility] = useState(false);
     const [goal, setGoal] = useState('');
     const [missingError, setMissingError] = useState('');
 
@@ -34,6 +35,17 @@ const SettingsScreen = ({navigation}) => {
             label = 'Edit Daily Intake'
             />
             </TouchableOpacity>
+
+            <TouchableOpacity
+            onPress = {() => {
+                setDataModalVisibility(true);
+            }}
+            >
+            <SettingsOptions
+            label = 'View Profile Data'
+            />
+            </TouchableOpacity>
+            
 
             <Modal
             style={styles.popup}
@@ -75,6 +87,17 @@ const SettingsScreen = ({navigation}) => {
                 {missingError ? "one or more fields are missing" : ""}
                  </Text>
                 </Modal>
+
+            <Modal
+            style= {styles.popup}
+            isVisible= {isDataModalVisible}
+            onBackdropPress={() => setDataModalVisibility(false)}>
+                <View>
+                    <Text style={styles.dataText}>Day Consumption: {states.dayConsumption}</Text>
+                    <Text style={styles.dataText}>Daily Goal: {states.dailyGoal}</Text>
+                    <Text style={styles.dataText}>BMI: {states.BMI}</Text>
+                </View>
+            </Modal>
             
             <FilledButton
             label= "Log out"
@@ -149,6 +172,11 @@ const styles = StyleSheet.create({
         opacity: 0.7,
         alignSelf: 'center',
         color: 'red',
+    },
+    dataText:{
+        fontSize: 16,
+        alignSelf: 'center',
+        padding: 10
     }
 })
 

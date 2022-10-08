@@ -43,6 +43,7 @@ const PersonalInfoScreen = ({navigation}) => {
             onChangeText={text => {
                 setPassword(text);
             }}
+            secureTextEntry= {true} 
             />
 
             <FormItem
@@ -52,6 +53,7 @@ const PersonalInfoScreen = ({navigation}) => {
             onChangeText={text => {
                 setConfirm(text);
             }}
+            secureTextEntry= {true} 
             />
 
             <FilledButton 
