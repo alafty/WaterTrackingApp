@@ -134,7 +134,12 @@ const styles = StyleSheet.create({
         width: '70%',
         backgroundColor: colors.white,
         alignSelf: 'center',
-        marginTop: 250
+        marginTop: 250,
+        shadowColor: 'black',
+        shadowOffset: {x: 5, y: 5},
+        shadowRadius: 10,
+        shadowOpacity: 0.4,
+        borderRadius: 15
 
     },
     cuptext:{

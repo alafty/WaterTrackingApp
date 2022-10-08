@@ -70,7 +70,6 @@ export const Slice = createSlice({
                     state.dayConsumption = user.dayConsumption;
                     state.cupAmount = user.cupAmount;
                     state.loggedIn = true;
-                    return true;
                   }
                  })
         },

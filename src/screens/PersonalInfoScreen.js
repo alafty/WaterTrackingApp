@@ -13,6 +13,8 @@ const PersonalInfoScreen = ({navigation}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirm, setConfirm] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [missingError, setMissingError] = useState('');
 
     return(
         <View style={styles.container}>
@@ -55,8 +57,12 @@ const PersonalInfoScreen = ({navigation}) => {
             <FilledButton 
             label= 'Next' 
             onPress={() => {
-                if(password != confirm){
-                    {/*display error*/}
+                if(name == '' || email == '' || password == '' || confirm == ''){
+                    setMissingError(true);
+                }
+                else if(password != confirm){
+                    setPasswordError(true);
+                    setMissingError(false);
                 }else{
                     dispatch({
                         type: setPersonalData,
@@ -67,9 +73,19 @@ const PersonalInfoScreen = ({navigation}) => {
                         }
                     })
                     navigation.navigate('health');
+                    setPasswordError(false)
+                    setMissingError(false)
                 }
             }}
             />
+            <Text 
+            style={[styles.footnote, {color: 'red', fontWeight: '700', paddingTop: 10, paddingBottom: 10}]}>
+                {passwordError ? "passwords do not match" : ""}
+            </Text>
+            <Text 
+            style={styles.footnote}>
+                {missingError ? "one or more fields are missing" : ""}
+            </Text>
         </View>
     );
 }
@@ -80,6 +96,15 @@ const styles = StyleSheet.create({
         height: '100%',
         padding: 20,
         paddingTop: 50
+    },
+    footnote:{
+        fontSize: 14,
+        fontWeight: '800',
+        paddingHorizontal: 30,
+        paddingTop: 5,
+        opacity: 0.7,
+        alignSelf: 'center',
+        color: 'red',
     }
 })
 

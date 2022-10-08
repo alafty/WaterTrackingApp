@@ -14,6 +14,7 @@ const HealthInfoScreen = ({navigation}) => {
     const [weight, setWeight] = useState('');
     const [exerciseDays, setDays] = useState('');
     const [exerciseHours, setHours] = useState('');
+    const [missingError, setMissingError] = useState('');
 
     return(
         <View style={styles.container}>
@@ -57,6 +58,9 @@ const HealthInfoScreen = ({navigation}) => {
             <FilledButton 
             label= 'Next' 
             onPress= {() => {
+                if(height == '' || weight == '' || exerciseDays == '' ||exerciseHours == ''){
+                    setMissingError(true);
+                }else{
                 dispatch({
                     type: setHealthData,
                     payload: {
@@ -68,8 +72,12 @@ const HealthInfoScreen = ({navigation}) => {
                 }
                 )
                 navigation.navigate('goal')
-            }}
+            }}}
             />
+            <Text
+            style={styles.footnote}>
+                {missingError ? "one or more fields are missing" : ""}
+            </Text>
         </View>
     );
 }
@@ -80,6 +88,15 @@ const styles = StyleSheet.create({
         height: '100%',
         padding: 20,
         paddingTop: 50
+    },
+    footnote:{
+        fontSize: 14,
+        fontWeight: '800',
+        paddingHorizontal: 30,
+        paddingTop: 5,
+        opacity: 0.7,
+        alignSelf: 'center',
+        color: 'red',
     }
 })
 

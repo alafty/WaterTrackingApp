@@ -11,6 +11,7 @@ const DailyGoalScreen = ({navigation}) => {
     const states = useSelector(state => state.reducer);
     const dispatch = useDispatch();
     const [goal, setGoal] = useState('');
+    const [missingError, setMissingError] = useState('');
 
     useEffect(() => {
         if(states.loggedIn){
@@ -20,8 +21,7 @@ const DailyGoalScreen = ({navigation}) => {
 
         return(
         <View style={styles.container}> 
-            
-            
+
             <FormItem
             heading= 'Set your daily goal'
             label= 'Daily Goal'
@@ -34,12 +34,23 @@ const DailyGoalScreen = ({navigation}) => {
             <FilledButton 
             label= 'Next' 
             onPress= {() => {
-                dispatch({
-                    type: setDailyGoal,
-                    payload: goal
-                })
+                if(goal == ''){
+                    setMissingError(true);
+                }else{
+                    dispatch({
+                        type: setDailyGoal,
+                        payload: goal
+                    })
+                }
             }}
             />
+            <Text style={styles.heading}>
+                Your ideal daily intake is {states.idealIntake} ml
+            </Text>
+            <Text 
+            style={styles.footnote}>
+                {missingError ? "one or more fields are missing" : ""}
+            </Text>
         </View>
     );
 }
@@ -65,6 +76,16 @@ const styles = StyleSheet.create({
         textAlign: 'center'
 
     },
+    footnote:{
+        fontSize: 14,
+        fontWeight: '800',
+        paddingHorizontal: 30,
+        paddingTop: 5,
+        opacity: 0.7,
+        alignSelf: 'center',
+        color: 'red',
+
+    }
 })
 
 export default DailyGoalScreen;

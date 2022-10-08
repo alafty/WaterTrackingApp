@@ -11,8 +11,12 @@ const LandingScreen = ({navigation}) => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
     useEffect(() => {
-        
+        if(states.loggedIn){
+            navigation.navigate('tab');
+            setError(false);
+        }
     }, [states.loggedIn]);
 
     return(
@@ -25,6 +29,10 @@ const LandingScreen = ({navigation}) => {
             </View>
 
             <View>
+            <Text 
+            style={[styles.footnote, {color: 'red', fontWeight: '600', paddingTop: 0, paddingBottom: 10}]}>
+                {error ? "Invalid Username or Password" : ""}
+            </Text>
             <TextInput
             value={email}
             style={styles.input}
@@ -64,17 +72,15 @@ const LandingScreen = ({navigation}) => {
             <FilledButton 
             label= 'Login'
             onPress= {() => {
-                if(dispatch({
+                dispatch({
                     type: login,
                     payload:{
                         email: email, 
                         password: password
                     }
-                })){
-                    navigation.navigate('tab')
-                }else {
-                    
-                    {/*display error*/}
+                })
+                if(!states.loggedIn) {
+                    setError(true)
                 }
                 }}
             />
