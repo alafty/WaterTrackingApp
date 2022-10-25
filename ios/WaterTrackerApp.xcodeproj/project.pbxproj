@@ -8,28 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* WaterTrackerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WaterTrackerAppTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-WaterTrackerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-WaterTrackerApp.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-WaterTrackerApp-WaterTrackerAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-WaterTrackerApp-WaterTrackerAppTests.a */; };
+		4334296B7FC004E26E27B81E /* libPods-WaterTrackerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D00CD4675784A25D5DC88FE8 /* libPods-WaterTrackerApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		E2C0AAFA28F1D52800E6FEAC /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAEA28F1D52800E6FEAC /* Fontisto.ttf */; };
-		E2C0AAFB28F1D52800E6FEAC /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAEB28F1D52800E6FEAC /* Octicons.ttf */; };
-		E2C0AAFC28F1D52800E6FEAC /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAEC28F1D52800E6FEAC /* Feather.ttf */; };
-		E2C0AAFD28F1D52800E6FEAC /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAED28F1D52800E6FEAC /* Entypo.ttf */; };
-		E2C0AAFE28F1D52800E6FEAC /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAEE28F1D52800E6FEAC /* FontAwesome5_Brands.ttf */; };
-		E2C0AAFF28F1D52800E6FEAC /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAEF28F1D52800E6FEAC /* MaterialCommunityIcons.ttf */; };
-		E2C0AB0028F1D52800E6FEAC /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAF028F1D52800E6FEAC /* AntDesign.ttf */; };
-		E2C0AB0128F1D52800E6FEAC /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAF128F1D52800E6FEAC /* Foundation.ttf */; };
-		E2C0AB0228F1D52800E6FEAC /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAF228F1D52800E6FEAC /* Ionicons.ttf */; };
-		E2C0AB0328F1D52800E6FEAC /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAF328F1D52800E6FEAC /* FontAwesome5_Solid.ttf */; };
-		E2C0AB0428F1D52800E6FEAC /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAF428F1D52800E6FEAC /* FontAwesome5_Regular.ttf */; };
-		E2C0AB0528F1D52800E6FEAC /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAF528F1D52800E6FEAC /* FontAwesome.ttf */; };
-		E2C0AB0628F1D52800E6FEAC /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAF628F1D52800E6FEAC /* Zocial.ttf */; };
-		E2C0AB0728F1D52800E6FEAC /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAF728F1D52800E6FEAC /* EvilIcons.ttf */; };
-		E2C0AB0828F1D52800E6FEAC /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAF828F1D52800E6FEAC /* SimpleLineIcons.ttf */; };
-		E2C0AB0928F1D52800E6FEAC /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2C0AAF928F1D52800E6FEAC /* MaterialIcons.ttf */; };
+		E3BEBF4C32AFB5FCBD2B846E /* libPods-WaterTrackerApp-WaterTrackerAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD33DCB697F997118309121 /* libPods-WaterTrackerApp-WaterTrackerAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,19 +30,17 @@
 		00E356EE1AD99517003FC87E /* WaterTrackerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterTrackerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* WaterTrackerAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterTrackerAppTests.m; sourceTree = "<group>"; };
+		10F95665D36E88C8007F423A /* Pods-WaterTrackerApp-WaterTrackerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTrackerApp-WaterTrackerAppTests.release.xcconfig"; path = "Target Support Files/Pods-WaterTrackerApp-WaterTrackerAppTests/Pods-WaterTrackerApp-WaterTrackerAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* WaterTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WaterTrackerApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = WaterTrackerApp/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WaterTrackerApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WaterTrackerApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WaterTrackerApp/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-WaterTrackerApp-WaterTrackerAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterTrackerApp-WaterTrackerAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-WaterTrackerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTrackerApp.debug.xcconfig"; path = "Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-WaterTrackerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTrackerApp.release.xcconfig"; path = "Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-WaterTrackerApp-WaterTrackerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTrackerApp-WaterTrackerAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterTrackerApp-WaterTrackerAppTests/Pods-WaterTrackerApp-WaterTrackerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-WaterTrackerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterTrackerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27F18BCB0B7BCF316DC0B549 /* Pods-WaterTrackerApp-WaterTrackerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTrackerApp-WaterTrackerAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterTrackerApp-WaterTrackerAppTests/Pods-WaterTrackerApp-WaterTrackerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3BD33DCB697F997118309121 /* libPods-WaterTrackerApp-WaterTrackerAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterTrackerApp-WaterTrackerAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WaterTrackerApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-WaterTrackerApp-WaterTrackerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTrackerApp-WaterTrackerAppTests.release.xcconfig"; path = "Target Support Files/Pods-WaterTrackerApp-WaterTrackerAppTests/Pods-WaterTrackerApp-WaterTrackerAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		D00CD4675784A25D5DC88FE8 /* libPods-WaterTrackerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterTrackerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C0AAEA28F1D52800E6FEAC /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		E2C0AAEB28F1D52800E6FEAC /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		E2C0AAEC28F1D52800E6FEAC /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
@@ -75,6 +57,8 @@
 		E2C0AAF728F1D52800E6FEAC /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		E2C0AAF828F1D52800E6FEAC /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		E2C0AAF928F1D52800E6FEAC /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		E560F4E44A427D054DF65F48 /* Pods-WaterTrackerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTrackerApp.debug.xcconfig"; path = "Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EB9237281141BC29C0170C5C /* Pods-WaterTrackerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTrackerApp.release.xcconfig"; path = "Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -83,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-WaterTrackerApp-WaterTrackerAppTests.a in Frameworks */,
+				E3BEBF4C32AFB5FCBD2B846E /* libPods-WaterTrackerApp-WaterTrackerAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-WaterTrackerApp.a in Frameworks */,
+				4334296B7FC004E26E27B81E /* libPods-WaterTrackerApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-WaterTrackerApp.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-WaterTrackerApp-WaterTrackerAppTests.a */,
+				D00CD4675784A25D5DC88FE8 /* libPods-WaterTrackerApp.a */,
+				3BD33DCB697F997118309121 /* libPods-WaterTrackerApp-WaterTrackerAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,10 +157,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-WaterTrackerApp.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-WaterTrackerApp.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-WaterTrackerApp-WaterTrackerAppTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-WaterTrackerApp-WaterTrackerAppTests.release.xcconfig */,
+				E560F4E44A427D054DF65F48 /* Pods-WaterTrackerApp.debug.xcconfig */,
+				EB9237281141BC29C0170C5C /* Pods-WaterTrackerApp.release.xcconfig */,
+				27F18BCB0B7BCF316DC0B549 /* Pods-WaterTrackerApp-WaterTrackerAppTests.debug.xcconfig */,
+				10F95665D36E88C8007F423A /* Pods-WaterTrackerApp-WaterTrackerAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -212,12 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WaterTrackerAppTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				AAB6467952F54DC07BCCA73D /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				02B89B6120D9536008D6EC45 /* [CP] Embed Pods Frameworks */,
+				DD93FA0BF83C7FAB34A9926A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,14 +217,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WaterTrackerApp" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				64B90EE350DCAE2E0A0BAD30 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				7A107D5098AF9BFA6FD41860 /* [CP] Embed Pods Frameworks */,
+				085131D5FF3078E2F09BBBF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,23 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2C0AAFA28F1D52800E6FEAC /* Fontisto.ttf in Resources */,
-				E2C0AB0528F1D52800E6FEAC /* FontAwesome.ttf in Resources */,
-				E2C0AB0128F1D52800E6FEAC /* Foundation.ttf in Resources */,
-				E2C0AB0428F1D52800E6FEAC /* FontAwesome5_Regular.ttf in Resources */,
-				E2C0AB0228F1D52800E6FEAC /* Ionicons.ttf in Resources */,
-				E2C0AB0728F1D52800E6FEAC /* EvilIcons.ttf in Resources */,
-				E2C0AAFD28F1D52800E6FEAC /* Entypo.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				E2C0AB0628F1D52800E6FEAC /* Zocial.ttf in Resources */,
-				E2C0AB0828F1D52800E6FEAC /* SimpleLineIcons.ttf in Resources */,
-				E2C0AAFC28F1D52800E6FEAC /* Feather.ttf in Resources */,
-				E2C0AAFB28F1D52800E6FEAC /* Octicons.ttf in Resources */,
-				E2C0AAFE28F1D52800E6FEAC /* FontAwesome5_Brands.ttf in Resources */,
-				E2C0AB0028F1D52800E6FEAC /* AntDesign.ttf in Resources */,
-				E2C0AB0928F1D52800E6FEAC /* MaterialIcons.ttf in Resources */,
-				E2C0AB0328F1D52800E6FEAC /* FontAwesome5_Solid.ttf in Resources */,
-				E2C0AAFF28F1D52800E6FEAC /* MaterialCommunityIcons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,46 +307,41 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		02B89B6120D9536008D6EC45 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp-WaterTrackerAppTests/Pods-WaterTrackerApp-WaterTrackerAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp-WaterTrackerAppTests/Pods-WaterTrackerApp-WaterTrackerAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp-WaterTrackerAppTests/Pods-WaterTrackerApp-WaterTrackerAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		085131D5FF3078E2F09BBBF6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WaterTrackerApp-WaterTrackerAppTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		64B90EE350DCAE2E0A0BAD30 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,41 +363,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+		7A107D5098AF9BFA6FD41860 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp-WaterTrackerAppTests/Pods-WaterTrackerApp-WaterTrackerAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp-WaterTrackerAppTests/Pods-WaterTrackerApp-WaterTrackerAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp-WaterTrackerAppTests/Pods-WaterTrackerApp-WaterTrackerAppTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		AAB6467952F54DC07BCCA73D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterTrackerApp-WaterTrackerAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterTrackerApp/Pods-WaterTrackerApp-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+		DD93FA0BF83C7FAB34A9926A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -503,7 +471,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-WaterTrackerApp-WaterTrackerAppTests.debug.xcconfig */;
+			baseConfigurationReference = 27F18BCB0B7BCF316DC0B549 /* Pods-WaterTrackerApp-WaterTrackerAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -530,7 +498,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-WaterTrackerApp-WaterTrackerAppTests.release.xcconfig */;
+			baseConfigurationReference = 10F95665D36E88C8007F423A /* Pods-WaterTrackerApp-WaterTrackerAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -554,7 +522,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-WaterTrackerApp.debug.xcconfig */;
+			baseConfigurationReference = E560F4E44A427D054DF65F48 /* Pods-WaterTrackerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -581,7 +549,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-WaterTrackerApp.release.xcconfig */;
+			baseConfigurationReference = EB9237281141BC29C0170C5C /* Pods-WaterTrackerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
